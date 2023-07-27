@@ -1,0 +1,37 @@
+.contenedor {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.botonera {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  width: 100%;
+  padding: 0px;
+}
+header {
+  width: 90%;
+  margin: auto;
+}
+.logout {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 24px;
+  color: white;
+  background: #0384fc;
+}
