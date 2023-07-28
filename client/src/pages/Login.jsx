@@ -3,6 +3,7 @@ import { Button, TextField } from '@mui/material'
 import axios from 'axios'
 import { Link, useNavigate } from 'react-router-dom'
 import { UserContext } from '../context/LoginContext'
+import Swal from 'sweetalert2'
 
 const Login = () => {
   const { setUser, setIsAutenticated } = useContext(UserContext)
@@ -43,10 +44,12 @@ const Login = () => {
           setUser(response.user)
           setIsAutenticated(true)
           navigate('/welcome')
+        } else {
+          Swal.fire({ icon: 'error', text: 'Incorrect username or password' })
         }
       })
       .catch((err) => {
-        console.log(err)
+        Swal.fire(err)
       })
   }
 

@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 import { Button, TextField } from '@mui/material'
 import axios from 'axios'
+import Swal from 'sweetalert2'
 import { Link, useNavigate } from 'react-router-dom'
 const Register = () => {
   const [formData, setFormData] = useState({
     username: '',
     password: '',
   })
-  const port = import.meta.env.PORT
 
   const [formErrors, setFormErrors] = useState({})
   const navigate = useNavigate()
@@ -35,6 +35,7 @@ const Register = () => {
       .then((result) => result.data)
       .then((response) => {
         if (response.creado === 'ok') {
+          Swal.fire({ icon: 'success', text: 'User Create Success' })
           setFormErrors({})
           navigate('/')
         }

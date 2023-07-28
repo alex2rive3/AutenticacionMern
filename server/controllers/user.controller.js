@@ -7,8 +7,7 @@ export const login = async (req, res) => {
     const user = await userModel.findOne({ username: username })
 
     if (user === null) {
-      res.status(500)
-      res.json({ username: { message: 'El usuario es incorrecto.' } })
+      res.json({ message: 'El usuario es incorrecto.' })
     } else {
       const passwordValid = await bcrypt.compare(password, user.password)
 
@@ -19,10 +18,7 @@ export const login = async (req, res) => {
 
         res.status(200).json({ estado: 'ok', user })
       } else {
-        res.status(500)
-        res.json({
-          password: { message: 'La contraseña es incorrecta.' },
-        })
+        res.json({ message: 'La contraseña es incorrecta.' })
       }
     }
   } catch (err) {
