@@ -45,6 +45,8 @@ LOCAL_HOST=http://localhost:5173
 
 ## Iniciar el servidor y el cliente:
 
+Asegurarse de tener corriendo el servidor de mongoDb
+
 ```
 # En la carpeta 'server', inicia el servidor
 
