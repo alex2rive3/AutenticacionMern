@@ -13,7 +13,7 @@ Asegúrate de tener instalado lo siguiente en tu sistema:
 Clonar el repositorio:
 
 ```
-git clone https://github.com/alex2rive3/AutenticacionMern
+git clone https://github.com/alex2rive3/AutenticacionMern.git
 cd AutenticacionMern
 ```
 
