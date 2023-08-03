@@ -36,8 +36,8 @@ npm install
 
 ## Configurar el archivo .env en el servidor:
 
-En la carpeta server, crea un archivo llamado .env y define las siguientes variables de entorno:
-
+En la carpeta server, ya esta puesta un archivo .env, con los datos necesarios para el primer arranque:
+* modificar este archivo solo en caso que tengas problemas con las rutas
 ```
 MONGODB_URI=mongodb://localhost:27017 # URL de conexión a la base de datos MongoDB
 LOCAL_HOST=http://localhost:5173
@@ -61,3 +61,4 @@ npm run dev
 
 Acceder a la aplicación en tu navegador:
 Abre tu navegador y visita http://localhost:5173. Esto cargará la aplicación de React que se ejecuta en el cliente.
+(En caso que de error de cors utilizando el http://127.0.0.1:5173, utilizar el link descripto anteriormente)
